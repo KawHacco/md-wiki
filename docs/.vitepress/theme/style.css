@@ -28,6 +28,13 @@
   --vp-c-brand-soft: rgba(117, 128, 215, 0.16);
 }
 
+.tag-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .tag-badge {
   display: inline-block;
   padding: 0.25rem 0.75rem;
@@ -35,8 +42,13 @@
   color: white;
   border-radius: 9999px;
   font-size: 0.875rem;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.tag-badge:hover {
+  background-color: var(--vp-c-brand-2);
+  color: white;
 }
 
 #giscus-container {

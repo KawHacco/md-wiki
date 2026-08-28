@@ -2,9 +2,9 @@
 layout: home
 
 hero:
-  name: "Wiki"
-  text: "Markdown-based Documentation"
-  tagline: 気軽に編集できるWikiシステム
+  name: "N高大百科"
+  text: "みんなで作る、非公式Wiki"
+  tagline: N高グループを生徒の視点から解説するWiki
   actions:
     - theme: brand
       text: ガイドを読む
@@ -14,10 +14,10 @@ hero:
       link: /faq/
 
 features:
-  - title: シンプル
-    details: Markdownを書くだけで記事が作成される。特別な知識は不要です。
-  - title: 管理が簡単
-    details: ディレクトリ構成が自動的にサイドバーに反映されます。
-  - title: 全文検索
-    details: 記事内のキーワードをすぐに検索できます。
+  - title: 自由に編集可能
+    details: 皆で作っていく非公式Wikiです
+  - title: 嘘を書かない
+    details: 人を傷つけることは許しません
+  - title: 愛のあるユーモアを
+    details: 積極的に、オーバーリアクションで、節度大事に。誹謗中傷にならない範囲で
 ---
