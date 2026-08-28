@@ -1,7 +1,6 @@
 ---
 title: Tags
 description: All tags used in this wiki
-layout: page
 ---
 
 <script setup lang="ts">
