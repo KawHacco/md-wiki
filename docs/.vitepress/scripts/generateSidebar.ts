@@ -159,9 +159,9 @@ export function generateNav(): DefaultTheme.Config['nav'] {
   try {
     const entries = fs.readdirSync(docsDir, { withFileTypes: true })
 
-    // Get all categories as nav items
+    // Get all categories as nav items (tags is handled separately as a static entry)
     const categories = entries
-      .filter(e => e.isDirectory() && !e.name.startsWith('.') && e.name !== 'public')
+      .filter(e => e.isDirectory() && !e.name.startsWith('.') && e.name !== 'public' && e.name !== 'tags')
       .map(e => e.name)
       .sort()
 
