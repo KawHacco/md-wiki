@@ -2,11 +2,12 @@ import { defineConfig } from 'vitepress'
 import { generateSidebar, generateNav } from './scripts/generateSidebar'
 
 export default defineConfig({
-  title: 'Wiki',
+  title: 'N高大百科',
   description: 'A Markdown-based Wiki',
   base: '/md-wiki/',
   lastUpdated: true,
   ignoreDeadLinks: true,
+  cleanUrls: true,
 
   themeConfig: {
     logo: '/logo.svg',
