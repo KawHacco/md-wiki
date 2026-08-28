@@ -1,17 +1,37 @@
+/**
+ * Brand color: #1D266A
+ * Light/dark variants below are derived from this base hue (~233°)
+ * so the palette stays consistent while remaining visible on both
+ * light and dark backgrounds.
+ */
 :root {
-  --c-brand: #3b81f6;
-  --c-brand-light: #60a5fa;
+  --vp-c-brand-1: #1d266a;
+  --vp-c-brand-2: #253188;
+  --vp-c-brand-3: #141a48;
+  --vp-c-brand-soft: rgba(29, 38, 106, 0.14);
+
+  --vp-button-brand-bg: var(--vp-c-brand-1);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+  --vp-button-brand-active-bg: var(--vp-c-brand-3);
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-text: #ffffff;
+  --vp-button-brand-hover-text: #ffffff;
+  --vp-button-brand-active-text: #ffffff;
 }
 
-html.dark {
-  --c-brand: #60a5fa;
-  --c-brand-light: #93c5fd;
+.dark {
+  --vp-c-brand-1: #7580d7;
+  --vp-c-brand-2: #909adf;
+  --vp-c-brand-3: #5967cf;
+  --vp-c-brand-soft: rgba(117, 128, 215, 0.16);
 }
 
 .tag-badge {
   display: inline-block;
   padding: 0.25rem 0.75rem;
-  background-color: var(--c-brand-light);
+  background-color: var(--vp-c-brand-1);
   color: white;
   border-radius: 9999px;
   font-size: 0.875rem;
