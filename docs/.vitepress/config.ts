@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 import { generateSidebar, generateNav } from './scripts/generateSidebar'
 
 export default defineConfig({
+  lang: 'ja-JP',
   title: 'N高大百科',
   description: 'A Markdown-based Wiki',
   base: '/md-wiki/',
@@ -14,7 +15,7 @@ export default defineConfig({
     nav: [
       ...generateNav(),
       {
-        text: 'Tags',
+        text: 'タグ',
         link: '/tags/',
         activeMatch: '/tags/'
       }
@@ -50,7 +51,19 @@ export default defineConfig({
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2026'
-    }
+    },
+    outlineTitle: '目次',
+    lastUpdatedText: '最終更新日',
+    docFooter: {
+      prev: '前のページ',
+      next: '次のページ'
+    },
+    darkModeSwitchLabel: 'テーマ',
+    lightModeSwitchTitle: 'ライトモードに切り替え',
+    darkModeSwitchTitle: 'ダークモードに切り替え',
+    sidebarMenuLabel: 'メニュー',
+    returnToTopLabel: 'トップに戻る',
+    langMenuLabel: '言語を変更'
   },
 
   markdown: {

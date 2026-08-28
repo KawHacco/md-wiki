@@ -67,6 +67,12 @@ function getFilesInDir(dirPath: string): PageInfo[] {
   return files
 }
 
+function getCategoryLabel(categoryPath: string, categoryName: string): string {
+  const indexPath = path.join(categoryPath, 'index.md')
+  const fm = parseFrontMatter(indexPath)
+  return fm.title || categoryName.charAt(0).toUpperCase() + categoryName.slice(1)
+}
+
 function createSidebarForCategory(categoryPath: string, categoryName: string): DefaultTheme.SidebarItem | null {
   try {
     const entries = fs.readdirSync(categoryPath, { withFileTypes: true })
@@ -117,7 +123,7 @@ function createSidebarForCategory(categoryPath: string, categoryName: string): D
     if (items.length === 0) return null
 
     return {
-      text: categoryName.charAt(0).toUpperCase() + categoryName.slice(1),
+      text: getCategoryLabel(categoryPath, categoryName),
       items,
       collapsible: true,
       collapsed: false
@@ -166,8 +172,9 @@ export function generateNav(): DefaultTheme.Config['nav'] {
       .sort()
 
     for (const category of categories) {
+      const categoryPath = path.join(docsDir, category)
       nav.push({
-        text: category.charAt(0).toUpperCase() + category.slice(1),
+        text: getCategoryLabel(categoryPath, category),
         link: `/${category}/`,
         activeMatch: `/${category}/`
       })

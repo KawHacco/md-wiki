@@ -1,15 +1,15 @@
 ---
-title: Tags
-description: All tags used in this wiki
+title: タグ
+description: このWikiで使われているタグの一覧
 ---
 
 <script setup lang="ts">
 import { data as tags } from '../.vitepress/theme/tags.data'
 </script>
 
-# Tags
+# タグ
 
-All tags used across the wiki:
+このWikiで使われているすべてのタグ:
 
 <div v-for="{ tag, pages } in tags" :key="tag" :id="tag" class="tag-section">
   <h2><span class="tag-badge">{{ tag }}</span></h2>
