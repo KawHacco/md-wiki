@@ -36,12 +36,17 @@
 }
 
 .tag-badge {
-  display: inline-block;
-  padding: 0.25rem 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  height: 1.75rem;
+  padding: 0 0.75rem;
   background-color: var(--vp-c-brand-1);
   color: white;
   border-radius: 9999px;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
   text-decoration: none;
   transition: background-color 0.2s;
 }
@@ -49,6 +54,16 @@
 .tag-badge:hover {
   background-color: var(--vp-c-brand-2);
   color: white;
+}
+
+.tag-section {
+  margin-bottom: 2rem;
+}
+
+.tag-section h2 {
+  border-top: none;
+  margin: 0 0 0.75rem;
+  padding-top: 0;
 }
 
 #giscus-container {
