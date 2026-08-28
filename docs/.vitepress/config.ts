@@ -6,6 +6,7 @@ export default defineConfig({
   description: 'A Markdown-based Wiki',
   base: '/md-wiki/',
   lastUpdated: true,
+  ignoreDeadLinks: true,
 
   themeConfig: {
     logo: '/logo.svg',
